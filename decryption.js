@@ -3,8 +3,8 @@
 var decryption = (function() {
 
   function decode(str, shift, callback) {
-    var decodedText = caesarShift(str, shift);
-    if (shift <= 26 && shift >= -26) {
+    if (shift <= 25 && shift >= -25) {
+      var decodedText = caesarShift(str, shift);
       callback(null, {
         'status': 'ok',
         'text': decodedText
