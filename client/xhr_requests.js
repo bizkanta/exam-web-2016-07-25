@@ -4,8 +4,8 @@ function Xhr_request(){
   this.url = 'http://127.0.0.1:3000/decode';
 
   this.sendTextToServer = function(text, callback){
-    var encryptedText = JSON.stringify(text);
-    this.createRequest('POST', this.url, encryptedText, callback);
+    var encryptedData = JSON.stringify(text);
+    this.createRequest('POST', this.url, encryptedData, callback);
   }
 
   this.createRequest = function(method, url, data, callback){

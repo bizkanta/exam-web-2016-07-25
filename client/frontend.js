@@ -11,12 +11,12 @@
   button.addEventListener('click', decodeText);
 
   function decodeText() {
-    var decodedText = {
+    var encryptedSettings = {
       text: encryptedText.value,
       shift: shift.value
     }
     loading();
-    request.sendTextToServer(decodedText, displayDecodedText)
+    request.sendTextToServer(encryptedSettings, displayDecodedText)
   }
 
   function displayDecodedText(text) {

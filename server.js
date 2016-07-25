@@ -10,8 +10,7 @@ app.use(bodyParser.json());
 app.use(express.static('./client'));
 
 app.post('/decode', urlencodedParser, function(req, res) {
-  console.log(req.body);
-  decryption.caesarShift(req.body.text, req.body.shift, function(err, decodedText){
+  decryption.decode(req.body.text, req.body.shift, function(err, decodedText){
     if (err) {
       res.status(400).json(err);
     } else {
